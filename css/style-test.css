@@ -1,0 +1,895 @@
+/*
+ * ОБЩЕЕ
+ * ШАПКА
+ * ГОТОВЫЕ ДОМА ДЕШЕВЛЕ 
+ * 5 ПРИЧИН
+ * ГОТОВЫЕ ДОМА
+ * КАРТА ПРОЕКТА
+ * КУПИТЬ ДОМ ДЕШЕВЛЕ
+ * ГРАФИК СТРОИТЕЛЬСТВА
+ * ДОКУМЕНТЫ НА ДОМ
+ * ОТЗЫВЫ
+ * КАРТА ПРОЕЗДА
+ * ФИНАЛЬНАЯ ФОРМА
+ * ФУТЕР
+ * ПРОЕКТ В МОДАЛЬНОМ ОКНЕ
+ * ДРУГОЕ
+*/
+
+
+/* BEGIN - ОБЩЕЕ */
+
+body {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.relative {position: relative;}
+.absolute {position: absolute;}
+
+.flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.flex_dir_col {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-flex-direction: column;
+    -ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.flex_wrap {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.flex_align_center {
+	-webkit-align-items: center;
+	-ms-flex-align: center;  
+	align-items: center;
+}
+
+.flex_align_justify {
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;  
+	align-items: stretch;	
+}
+
+.flex_content_center {
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.flex_content_justify {
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.flex_item_center {
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+}
+
+.flex_item_justify {
+	-webkit-align-self: stretch;
+	-ms-flex-item-align: stretch;
+	align-self: stretch;
+}
+
+.no_margin {margin: 0 !important;}
+
+.no_padding {padding: 0 !important;}
+
+.animated {
+	-webkit-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+}
+
+.clear:after,
+.clear:before{
+	content: '';
+	display: table;
+}
+
+.clear:after{clear: both;}	
+
+.fullscreen {min-height: 90vh;}
+
+.section {	
+	padding-left: 5vmin;
+	padding-right: 5vmin;
+}
+
+.section_header,
+.section_footer,
+.section_body {
+	padding-top: 5vmin;
+	padding-bottom: 5vmin;
+}
+
+/* END - ОБЩЕЕ */
+
+
+/* BEGIN - ШАПКА */
+
+.page_header {
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 5em;
+	padding: 1em 6vmin;
+	background-color: rgba(255,255,255,0.85);
+}
+
+.header_logo {height: 100%;}
+
+.header_logo .logo_image {height: 100%;}
+
+.header_logo .logo_name {margin-left: 1em;}
+
+.header_icon_button {
+	top: 100%;
+	right: 50%;
+	margin-top: 0.8em;
+	margin-right: -20px;
+	height: auto;
+	min-width: auto;
+	padding: 0 5px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+/* END - ШАПКА */
+
+
+/* BEGIN - ГОТОВЫЕ ДОМА ДЕШЕВЛЕ */
+
+.section_intro {background: url(../images/section_intro_bg.jpg) no-repeat center top / cover;}
+
+.section_intro .section_header {margin-top: 5em;}
+
+.section_intro_item {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 20px 20px 0;
+}
+
+.section_intro_item:last-child {margin-right: 0;}
+
+.section_intro_item .icon {
+	position: relative;
+	z-index: 1;
+	margin-right: 10px;
+	padding: 30px;
+	color: #2b2520;
+	background-color: #fce731;
+	border-radius: 50% 50% 0 50%;
+}
+
+.section_intro_item .icon_text{text-shadow: 0 0 50px #000, 0 0 10px #000;}
+
+.section_intro_price {
+	display: table;
+	line-height: 1;
+	margin-left: 1rem;
+}
+
+.section_intro_price .price {
+	font-size: 6.25vmax;
+	text-shadow: 
+	   -1px -1px 0 #e64b39,  
+		1px -1px 0 #e64b39,
+	   -1px  1px 0 #e64b39,
+		1px  1px 0 #e64b39,
+		5px 5px 10px rgba(0,0,0,0.75);
+}
+
+.section_intro .section_footer {
+	bottom: 0;
+	right: 10vmin;
+	width: 30%;
+}
+
+.section_intro_form {
+	padding: 30px 15px;
+	background-color: rgba(255,255,255,0.87);
+	border-radius: 10px 10px 0 0;
+}
+
+.section_intro_form .icon {
+	font-size: inherit;
+	background-color: #ed1c24;
+}
+
+/* END - ГОТОВЫЕ ДОМА ДЕШЕВЛЕ */
+
+
+/* BEGIN - 5 ПРИЧИН */
+
+.section_reason {background: url(../images/reason_bg.jpg) no-repeat center / cover;}
+
+.section_reason .slick-list {
+	width: 100%;
+	
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+}
+
+.reason_nav {
+	width: 100%;
+	
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.reason_nav li{
+	position: relative;
+	width: 20%;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.reason_nav li.slick-active {width: 25%;}
+
+.reason_list_inner {height: 100%;}
+
+.reason_nav_icon {
+	position: relative;
+	width: 100%;
+	color: rgba(170,170,170,0.75);
+	border-radius: 50%;
+}
+
+.reason_nav_icon::before {
+	content: '';
+	position: absolute;
+	top: 3%;
+	left: 3%;
+	display: block;
+	width: 94%;
+	height: 94%;
+	background-color: #fff;
+	border-radius: 50%;
+	opacity: 0;
+	
+	-webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+}
+
+.slick-active .reason_nav_icon::before {opacity: 1;}
+
+.reason_nav_icon svg{
+	position: relative;
+	z-index:1;
+	width: 100%;
+}
+
+.reason_nav li:hover .reason_nav_icon {color: rgba(170,170,170,0.9);}
+.reason_nav li.slick-active .reason_nav_icon{color: #ed1c24;}
+
+.reason_list_item {padding: 5vmin 10px 0;}
+
+.reason_list_number {
+	display: block;
+	font-size: 5em;
+	line-height: 1;
+}
+
+.reason_list_text {
+	margin: 0 -2px;
+	padding-right: 15px;
+}
+
+.reason_list_image {margin: 0 -2px;}
+
+/* END - 5 ПРИЧИН */
+
+
+/* BEGIN - ГОТОВЫЕ ДОМА */
+
+.section_project_list {background-color: #191919;}
+
+.section_project_list .section_header {background: url(../images/project_list.jpg) no-repeat center / cover;}
+
+.thumb_item_link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.thumb_item_text {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	height: 4em;
+	padding: 0 5%;
+	background-color: rgba(20,20,20,0.75);
+	
+	-webkit-transition: height 0.4s ease;
+			transition: height 0.4s ease;
+}
+
+.thumb_item_link:hover .thumb_item_text {height: 100%;}
+
+.thumb_item_title {
+	display: block;
+	max-width: 100%; /* Хак для IE */
+	margin: 0;
+	line-height: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.thumb_item_subtitle {
+	position: relative;
+	display: block;
+	max-width: 100%; /* Хак для IE */
+	max-height: 0;
+	opacity: 0;
+	
+	-webkit-transform: translateY(10em);
+			transform: translateY(10em);
+	
+	-webkit-transition: all 0.2s ease 0s;
+			transition: all 0.2s ease 0s;
+}
+
+.thumb_item_link:hover .thumb_item_subtitle {
+	opacity: 1;
+	max-height: 4em;
+	margin-top: 2em;
+	
+	-webkit-transform: translateY(0);
+			transform: translateY(0);
+	
+	-webkit-transition: all 0.2s ease 0.2s, max-height 0.2s ease 0s;
+			transition: all 0.2s ease 0.2s, max-height 0.2s ease 0s;
+}
+
+.thumb_item .icon {
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+}
+
+/* END - ГОТОВЫЕ ДОМА */
+
+
+/* BEGIN - КАРТА ПРОЕКТА */
+
+.section_project_map .section_header {background: url(../images/project_map_bg.jpg) no-repeat center / cover;}
+
+.project_map_nav {
+	padding: 5vmin 0;
+	background-color: #ed1c24;
+}
+
+.project_map_trigger {
+	background-color: transparent;
+	border-color: #fff;
+	overflow: visible;
+}
+
+.project_map_trigger:hover,
+.project_map_trigger.active {
+	color: #ed1c24;
+	background-color: #fff;
+}
+
+.project_map_trigger::before {display: none;}
+
+.project_map_trigger::after {
+	content: '';
+	position: absolute;
+	bottom: -5vmin;
+	left: 50%;
+	z-index: -1;
+	display: block;
+	width: 0;
+	height: 0;
+	margin-bottom: -1px;
+	margin-left: -10px;
+	border: 10px solid transparent;
+	border-top: 0;
+	border-bottom-color: #fff;
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all 0.4s ease;
+			transition: all 0.4s ease;
+}
+
+.project_map_trigger.active::after {
+	z-index: 4;
+	opacity: 1;
+	visibility: visible;
+}
+
+.project_map_popup {
+	left: 20px;
+	right: 20px;
+	z-index: 4;
+	display: none;
+	margin-top: 5vmin;
+	padding: 30px;
+	background-color: #fff;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.4);
+}
+
+.project_map_text {padding: 30px;}
+
+.project_map_title {margin-bottom: 30px;}
+
+.project_mark {
+	z-index: 3;
+	margin-left: -16px;
+	margin-top: -16px;
+}
+
+.project_mark_trigger {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 32px;
+	height: 32px;
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.project_mark_trigger::before,
+.project_mark_trigger::after {
+	content: '';
+	position: absolute;
+	display: block;
+	border-color: #e64b39	;
+	border-style: solid;
+	border-radius: 50%;
+	
+	-webkit-transition: all 0.4s ease;
+			transition: all 0.4s ease;
+}
+
+.project_mark_trigger::after,
+.project_mark_trigger.active::before {
+	top: 7px;
+	left: 7px;
+	display: block;
+	width: 18px;
+	height: 18px;
+	border-width: 9px;
+}
+
+.project_mark_trigger::before,
+.project_mark_trigger.active::after {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-width: 2px;
+}
+
+.project_mark_popup {
+	z-index: 3;
+	left: -50%;
+	display: none;
+	margin-top: -90px;
+	margin-left: 32px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0 5px 6px rgba(0,0,0,0.4);
+}
+
+.project_mark_popup::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	z-index: 4;
+	display: block;
+	width: 0;
+	height: 0;
+	margin-left: -5px;
+	border: 5px solid transparent;
+	border-top-color: #fff;
+}
+
+.project_mark_electricity {
+	top: 49%;
+	left: 31%;
+}
+
+.project_mark_water {
+	top: 80%;
+	left: 28.5%;
+}
+
+.project_mark_window {
+	top: 37%;
+	left: 42.3%;
+}
+
+.project_mark_roof {
+	top: 37%;
+	left: 68%;
+}
+
+.project_mark_gas {
+	top: 81%;
+	left: 77%;
+}
+
+.project_mark_wall_1 {
+	top: 49%;
+	left: 59%;
+}
+
+.project_mark_wall_2 {
+	top: 58%;
+	left: 63%;
+}
+
+.project_map_image {
+	display: block;
+	width: 100%;
+	
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+}
+
+/* END - КАРТА ПРОЕКТА */
+
+
+/* BEGIN - КУПИТЬ ДОМ ДЕШЕВЛЕ */
+
+.section_advantage {background: url(../images/advantage_bg.jpg) no-repeat center / cover;}
+
+.section_advantage .section_title {text-align: left;}
+
+.advantage_item {margin: 5vmin 0;}
+
+.advantage_label {
+	display: inline-block;
+	padding: 5px 15px;
+	background-color: #fff;
+}
+
+.advantage_label_notice {margin-left: 15px;}
+
+.advantage_icon {
+	vertical-align: top;
+	max-width: 40%;
+	margin-right: 20px;
+	border-radius: 0 50% 50% 50%;
+	overflow: hidden;
+}
+
+.advantage_number {
+	font-size: 4em;
+	line-height: 0.8;
+}
+
+.advantage_title {font-size: 20px;}
+
+.advantage_subtitle {
+	margin-bottom: 20px;
+	line-height: 1;
+}
+
+.advantage_button {margin-top: 5vmin;}
+
+.advantage_button .button {
+	font-weight: 600;
+	font-size: 13px;
+	border-color: #fff;
+}
+
+/* END - КУПИТЬ ДОМ ДЕШЕВЛЕ */
+
+
+/* BEGIN - ГРАФИК СТРОИТЕЛЬСТВА */
+
+.section_term_title {
+	margin-bottom: 5vmin;
+	text-align: left;
+}
+
+.section_term .section_image {margin-top: 5vmin;}
+
+/* END - ГРАФИК СТРОИТЕЛЬСТВА */
+
+
+/* BEGIN - ДОКУМЕНТЫ НА ДОМ */
+
+.section_agreement {background: #fff url(../images/agreement_bg.png) no-repeat right bottom / 50% auto;}
+
+.agreement_document_title {margin-bottom: 5vmin;}
+
+.agreement_document_list li {
+	margin-bottom: 10px;
+	padding-left: 2em;
+	text-indent: -2em;
+	counter-increment:item;
+}
+
+.agreement_document_list li:last-child {margin: 0;}
+ 
+.agreement_document_list li::before {
+	content:counter(item) ".";
+	display:inline-block;
+	width: 2em;
+	padding-right:0.5em;
+	font-weight: 800;
+	text-align: right;
+}
+
+.agreement_form {margin-top: 10vmin;}
+
+.agreement_manager {margin-top: 10vmin;}
+
+.agreement_document_text {
+	max-height: 430px;
+	overflow-y: auto;
+}
+
+/* END - ДОКУМЕНТЫ НА ДОМ */
+
+
+/* BEGIN - ОТЗЫВЫ */
+
+.section_review {background:url(../images/section_review_bg.jpg) repeat;}
+
+.section_review .section_header {padding-bottom: 0;}
+
+.review_item {padding: 0 5vmin;}
+
+.review_title {margin: 0 0 15px;}
+
+.review_image {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	height: 200px;
+	margin-bottom: 30px;
+	line-height: 200px;
+	background-color: #fff;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.review_name {
+	display: block;
+	font-size: 25px;
+}
+
+.review_link {
+	display: inline-block;
+	margin-top: 30px;
+}
+
+.section_review .slick-slider {
+	display: block;
+	padding-left: 10vmin;
+	padding-right: 10vmin;
+}
+
+.section_review .slick-arrow{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	z-index: 10;
+	background: url(../images/slider_arrow.svg) no-repeat rgba(0,0,0,0.6);
+	background-size: auto 100%;
+	
+	-webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+}
+
+.section_review .slick-prev{
+	left: -10px;
+	background-position: left center;
+}
+
+.section_review .slick-next {
+	right: -10px;
+	background-position: right center;
+}
+
+.section_review .slick-arrow:hover {background-color: #ed1c24;}
+
+/* END - ОТЗЫВЫ */
+
+
+/* BEGIN - КАРТА ПРОЕЗДА */
+
+.section_map {background-color: #fff;}
+
+#map {
+	min-height: 400px;
+	background-color: #ccc;
+}
+
+.map_contact {
+	padding: 0 2vmin;
+	background-color: #ed1c24;
+}
+
+.map_contact_item {padding: 6vmin 4vmin;}
+
+.map_contact_title {margin-left: 45px;}
+
+.map_contact_item .icon {background-color: #fff;}
+
+/* END - КАРТА ПРОЕЗДА */
+
+
+/* BEGIN - ФИНАЛЬНАЯ ФОРМА */
+
+.section_feedback {background-color: #c4d9ec;}
+
+.section_feedback .section_header {padding-bottom: 0;}
+
+.section_feedback .section_body {
+	margin: 0 auto;
+	padding-top: 0;
+}
+
+/* END - ФИНАЛЬНАЯ ФОРМА */
+
+
+/* BEGIN - ФУТЕР */
+
+.page_footer {padding: 3vmin;}
+
+.footer_logo,
+.footer_phone {padding: 3vmin;}
+
+.footer_logo .logo_name {font-size: 0.8em;}
+
+/* END - ФУТЕР */
+
+
+/* BEGIN - ПРОЕКТ В МОДАЛЬНОМ ОКНЕ */
+
+.modal_section {padding: 5vmin;}
+
+.modal_section .column {float: left;}
+
+.modal_header,
+.modal_image_container,
+.modal_project_desc {margin-bottom: 5vmin;}
+
+.modal_images {
+	width: 100%;
+	margin-top: 30px;
+	
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-align-items: center;
+	-ms-flex-align: center;  
+	align-items: center;
+	
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.modal_images_item {
+	height: 44px;
+	padding: 1px;
+	border: 1px solid #ccc;
+	
+	-webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+}
+
+.modal_images_item:hover {
+	-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+}
+
+.modal_project_info {margin-bottom: 15px;}
+
+.modal_footer {
+	padding: 5vmin 5vmin 0;
+	border-top: 1px solid #ccc;
+}
+
+.modal_project_form {margin: 0 auto;}
+
+/* END - ПРОЕКТ В МОДАЛЬНОМ ОКНЕ */
+
+
+/* BEGIN - ДРУГОЕ */
+
+.section_description {background-color: #eafafc;}
+
+.section_project_send {background: #B6D9F5;}
+
+.section_report {background: url(../images/section_report_bg.jpg) no-repeat right center /cover;}
+
+.section_bank {background-color: #DFD2C1;}
+
+.section_bank_button {
+	margin-top: 5vmin;
+	border-radius: 10vmin;
+}
+
+.section_team {background: url(../images/section_team_bg.jpg) no-repeat center top  /cover;}
+
+.company_phone {
+	display: inline-block;
+	line-height: 1;
+}
+
+.phone_title {
+	top: 3px;
+	left: 0;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.phone_code{font-size: 24px;}
+
+.phone_number {font-size: 45px;}
+
+.phone_notice {
+	display: block;
+	margin-top: 5px;
+	font-size: 12.5px;
+}
+
+.sq_meter_sign {
+	display: inline-block;
+	vertical-align: 100%;
+	font-size: 50%;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.sq_meter_sign::first-letter {
+	vertical-align: -50%;
+	font-size: 200%;
+}
+
+.disable_scroll {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* END - ДРУГОЕ */

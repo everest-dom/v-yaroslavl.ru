@@ -1,0 +1,403 @@
+
+
+/*==========Кнопка калькулятора============*/
+
+
+.calculator_a{
+	background: rgb(255, 117, 23);
+	color:#fff !important;
+	padding: 15px 20px;
+	border-radius: 0px 13px 13px 0px;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	font-weight: 600;
+	font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	position: fixed;
+	box-sizing: border-box;
+	bottom:50px;
+	left:0%;
+	z-index: 3;
+	outline: none !important;
+	opacity: 0.9;
+
+}
+
+
+
+.calculator_a:hover{
+	opacity: 1;
+	color:#fff;
+	text-decoration: none;
+}
+.calculator_img{
+	padding-right: 12px;
+	position: relative;
+	top:1px;
+	float:left;
+
+}
+
+.calculator_a b{
+	position: relative;
+	top:4px;
+}
+
+
+/*=========Оформление модального окна==========*/
+
+
+.modal-header_calculator{
+	border:none;
+}
+
+.close_calculator{
+	border:0px solid red !important;
+	font-size: 32px !important;
+	opacity: 0.8 !important;
+}
+.close_calculator:focus{
+	outline: none !important;
+}
+
+.modal-content-calculator{
+	border:3px solid rgb(253,97,3)!important;
+	box-shadow:none;
+}
+
+.modal-body_calculator{
+	border:0px solid red;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-top: 0px;
+
+}
+
+
+
+/*==============стили кнопок туда обратно===============*/
+.prev, .next { background-color:#fd6103; padding:10px 20px; color:#fff !important; text-decoration:none; font-weight: 300; font-size: 18px;font-family: 'Open Sans', sans-serif;}
+.prev:hover, .next:hover { text-decoration:none;}
+.prev { float:left; margin-top: 15px;}
+.next { float:right; margin-top: 15px;}
+#steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
+#steps li {font-size:24px; float:left; padding:10px; color:#b0b1b3;}
+#steps li span {font-size:11px; display:block;}
+#steps li.current { color:#000;}
+#makeWizard { background-color:#b0232a; color:#fff; padding:5px 10px; text-decoration:none; font-size:18px;}
+#makeWizard:hover { background-color:#000;}
+
+
+
+
+
+
+
+/*===============Форма калькулятора==============*/
+
+
+.modal_form-title{
+	color:rgb(68, 68, 68);
+	font-weight: 300;
+	font-size: 32px;
+	font-family: 'Open Sans', sans-serif;
+	border:0px solid red;
+	margin:10px 0px;
+}
+
+.step_p{
+	background: #fd6103;
+	color:#fff;
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+	margin:0px;
+	padding: 10px 0px;
+	padding-left: 20px;
+	margin-left: -20px;
+	width: 180px;
+	height: 44px;
+	box-sizing: border-box;
+	display: inline-block;
+	border: 0px solid red;
+}
+
+.step_img{
+	display: inline-block;
+	border: 0px solid red;
+	position: relative;
+	left:-5px;
+	top:18px;
+}
+
+fieldset{
+	border:0px solid red;
+}
+
+.option_box_wrap{
+	border:0px solid red;
+	min-width: 135px;
+	max-width: 160px;
+	min-height: 100px;
+	display: inline-block;
+	text-align: center;
+	padding: 0px 10px;
+	margin:15px;
+}
+.option_box{
+	cursor: pointer;
+}
+
+
+.title_fieldset{
+	color:rgb(102, 102, 102);
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	margin-top: 25px;
+	width: 80%;
+	margin-top:20px;
+	margin-bottom:30px;
+}
+
+.calculator_radio_name{
+	font-weight: 400;
+	color:#666;
+	font-size: 17px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#step4Prev{
+	display: none;
+}
+
+.tel_box_wrap{
+	display: flex;
+	align-items: center;
+	border:0px solid red;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.tel_box{
+	border:0px solid green;
+	display: inline-block;
+}
+
+
+.tel_calculator_input{
+  border:2px solid rgb(180, 180, 180);
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 20px;
+  outline: none;
+}
+
+
+.tel_calculator_button{
+	background: #fd6103;
+	color:#fff;
+	padding: 12px 30px;
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+	border:none;
+	margin-left: 20px;
+	vertical-align: top;
+
+}
+
+.tel_calculator_button:hover{
+	opacity: 0.9;
+}
+
+
+/*закрытие кнопки*/
+
+.display_none{
+	display: none !important;
+}
+
+
+/*валидация формы ошибка*/
+
+.tel_box{
+border:0px solid green;
+display:inline-block;
+position:relative;
+}
+
+.tel_calculator_input.error{
+	border:2px solid red;
+}
+
+label.error{
+	color:red;
+	border:0px solid red;
+	position:absolute;
+	top:44px;
+	left:20px;
+	font-size:12px;
+	font-family: 'Open Sans', sans-serif;
+	
+	
+}
+
+
+
+
+
+/*===================jquery.formstyler===============*/
+
+
+
+.jq-checkbox {
+	top: -1px;
+	vertical-align: middle;
+	width: 35px;
+	height: 35px;
+	margin: 0 4px 0 0;
+	border: 1px solid #C3C3C3;
+	border-radius: 3px;
+	background: #F5F5F5;
+	background: -webkit-linear-gradient(#FFF, #E6E6E6);
+	background:         linear-gradient(#FFF, #E6E6E6);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05), inset -1px -1px #FFF, inset 1px -1px #FFF;
+	cursor: pointer;
+}
+.jq-checkbox.checked .jq-checkbox__div {
+	width: 23px;
+	height: 23px;
+	margin: 5px 0 0 5px;
+	border-radius: 2px;
+	background: #333333;
+	box-shadow: none;
+}
+
+.jq-checkbox.checked~ p{
+	color:#fd6103;
+}
+
+.jq-checkbox.focused {
+	border: 1px solid #C3C3C3;
+	
+}
+.jq-checkbox.disabled {
+	opacity: .55;
+}
+
+
+.jq-radio {
+	top: -1px;
+	vertical-align: middle;
+	width: 35px;
+	height: 35px;
+	margin: 0 4px 0 0;
+	border: 1px solid #333333;
+	border-radius: 50%;
+	background: #F5F5F5;
+	background: -webkit-linear-gradient(#FFF, #E6E6E6);
+	background:         linear-gradient(#FFF, #E6E6E6);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05), inset -1px -1px #FFF, inset 1px -1px #FFF;
+	cursor: pointer;
+}
+.jq-radio.checked .jq-radio__div {
+	width: 23px;
+	height: 23px;
+	margin: 5px 0 0 5px;
+	border-radius: 50%;
+	background: #333333;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,.7);
+}
+
+.jq-radio.checked ~ p{
+	color:#fd6103;
+}
+.jq-radio.focused {
+	border: 1px solid #333333;
+}
+.jq-radio.disabled {
+	opacity: .55;
+}
+
+
+
+
+
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1170px) {
+
+
+}
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	
+}
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.calculator_a {
+		padding: 10px 10px;
+		font-size: 14px;
+	}
+	.prev, .next {
+		font-size: 15px;
+	}
+
+	.title_fieldset{
+		font-size: 16px;
+	}
+
+
+	.option_box_wrap{
+
+	}
+
+
+
+}
+
+
+
+/* мой */
+@media only screen and (max-width : 400px) {
+
+	.prev, .next {
+		font-size: 13px;
+		padding: 10px 10px;
+	}
+
+}
+
+/* мой */
+@media only screen and (max-width : 340px) {
+
+	.prev, .next {
+		font-size: 13px;
+		padding: 10px 10px;
+	}
+
+	.next{
+		margin-right: -10px;
+	}
+
+	.prev{
+		margin-left: -10px;
+	}
+
+}
